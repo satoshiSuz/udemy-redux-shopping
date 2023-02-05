@@ -11,3 +11,7 @@ export type cartType = {
   amount: number;
   total: number;
 };
+
+export type modalType = {
+  isOpen: boolean;
+};

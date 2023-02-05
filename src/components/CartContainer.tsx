@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { CartItem } from './CartItem';
-import { clearCart } from '../features/cart/Cartslice';
+import { openModal } from '../features/modal/ModalSlice';
 
 export const CartContainer = () => {
   const { amount, cartItems, total } = useAppSelector((store) => store.cart);
@@ -36,7 +36,7 @@ export const CartContainer = () => {
         <button
           className='btn'
           css={styles.buttonClear}
-          onClick={() => dispatch(clearCart())}
+          onClick={() => dispatch(openModal())}
         >
           全削除
         </button>
